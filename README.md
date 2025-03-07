@@ -32,16 +32,20 @@ stored in a local Docker volume and is not persisted to the cloud.
 You can run `hydra help` for a list of commands, and `hydra COMMAND --help` to get help about any command.
 
 ```
+$ hydra
+ - runs setup if necessary, starts service, connects, then stops service
 $ hydra setup
  - asks for token; optional port, username, password
 $ hydra start
  - starts service
+$ hydra stop
+ - stops service
+$ hydra restart
+ - stops then starts the service
 $ hydra connect
  - connects to service via psql
 $ hydra connect --start
  - automatically starts and stops the service around a psql session
-$ hydra stop
- - stops service
 $ hydra config
  - prints stored config info
 $ hydra teardown
