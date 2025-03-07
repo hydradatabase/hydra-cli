@@ -20,6 +20,10 @@ class CLI:
 
     subparsers.add_parser('stop', help='Stop the service')
 
+    parser_restart = subparsers.add_parser('restart', help='Restart the service')
+    parser_restart.add_argument('-p', '--port', help='Port to run the service on', default=None, type=int, required=False)
+    parser_restart.add_argument('--attach', help='Stay attached (prints logs)', action='store_true')
+
     parser_connect = subparsers.add_parser('connect', help='Connect to the service using psql')
     parser_connect.add_argument('--start', help='Start the service if it is not running', action='store_true')
 
@@ -39,6 +43,9 @@ class CLI:
       self.start(args)
     elif args.command == 'stop':
       self.stop(args)
+    elif args.command == 'restart':
+      self.stop(args)
+      self.start(args)
     elif args.command == 'connect':
       self.connect(args)
     elif args.command == 'setup':
