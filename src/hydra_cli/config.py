@@ -77,6 +77,7 @@ class Config:
 
   def write_postgres_config(self):
     with open(self.postgres_config(), 'w') as f:
+      f.write('listen_addresses = \'*\'\n')
       f.write('shared_preload_libraries = \'pg_duckdb\'\n')
       if self.token is not None:
         f.write(f"duckdb.hydra_token = '{self.token}'\n")
