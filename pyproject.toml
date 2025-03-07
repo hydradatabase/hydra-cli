@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "hydra-cli"
-version = "0.0.2"
+version = "0.0.3"
 authors = [{ name = "Jonathan Dance", email = "jd+pypi@wuputah.com" }]
 description = "Hydra CLI"
 readme = "README.md"
@@ -19,3 +19,9 @@ dependencies = ["platformdirs", "docker", "toml"]
 
 [project.scripts]
 hydra = "hydra_cli:main"
+
+[project.urls]
+Homepage = "https://pypi.org/project/hydra-cli/"
+Documentation = "https://docs.hydra.so/guides/local_development"
+Repository = "https://github.com/hydradatabase/hydra-cli"
+Issues = "https://github.com/hydradatabase/hydra-cli/issues"

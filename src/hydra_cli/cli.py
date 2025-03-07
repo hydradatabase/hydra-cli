@@ -7,7 +7,7 @@ from .docker import Docker
 class CLI:
   def __init__(self):
     parser = argparse.ArgumentParser(description='Hydra CLI')
-    parser.add_argument('--version', action='version', version='hydra-cli 0.0.2')
+    parser.add_argument('--version', action='version', version='hydra-cli 0.0.3')
     parser.add_argument('-C', '--config-dir', help='Specify the configuration directory', default=None, type=str, required=False)
     subparsers = parser.add_subparsers(dest='command', help='Subcommands')
 
