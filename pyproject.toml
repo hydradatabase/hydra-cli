@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "hydra-cli"
-version = "0.0.3"
+version = "0.0.4"
 authors = [{ name = "Jonathan Dance", email = "jd+pypi@wuputah.com" }]
 description = "Hydra CLI"
 readme = "README.md"
