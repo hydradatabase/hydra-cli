@@ -115,7 +115,7 @@ class CLI:
     current_config.load()
     current_config.set_defaults()
 
-    print('Visit https://start.hydra.so/get-started to get your token.')
+    print('Visit https://start.hydra.so/token to get your token.')
     input_token = True
     if current_config.token and current_config.token.strip() != '':
       change_token = input("You already have a token saved. Do you want to change your token? [y/N] ").strip()
